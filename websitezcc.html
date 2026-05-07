@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZCC — Creative AI Aesthetic Studio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fff8f1, #ffffff, #f6fbf4);
+      overflow-x: hidden;
+      color: #6E6A6A;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .floating {
+      animation: floating 5s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%,100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .fade {
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #B7C9B2, #F4D6DC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div>
+        <h1 class="text-2xl font-bold gradient-text">ZCC ✨</h1>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="#home" class="hover:text-pink-300 duration-300">Home</a>
+        <a href="#gallery" class="hover:text-pink-300 duration-300">Gallery</a>
+        <a href="#storymaker" class="hover:text-pink-300 duration-300">StoryMaker</a>
+        <a href="#recipemaker" class="hover:text-pink-300 duration-300">RecipeMaker</a>
+        <a href="#about" class="hover:text-pink-300 duration-300">About</a>
+        <a href="#connect" class="hover:text-pink-300 duration-300">Connect</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
+
+    <div class="absolute top-20 left-10 text-5xl floating">🌿</div>
+    <div class="absolute bottom-20 right-10 text-5xl floating">🎀</div>
+    <div class="absolute top-1/3 right-20 text-4xl floating">✨</div>
+
+    <div class="max-w-4xl text-center fade pt-24">
+      <div class="inline-block px-5 py-2 rounded-full glass mb-6 text-sm tracking-widest text-[#B7C9B2] font-semibold">
+        CREATIVE AI AESTHETIC STUDIO
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-black leading-tight text-gray-700">
+        Where Art Meets
+        <span class="gradient-text">Digital Magic ✨</span>
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-gray-500 max-w-2xl mx-auto">
+        ZCC adalah creative AI aesthetic studio untuk membuat visual branding, StoryMaker, RecipeMaker, worksheet, AI art, dan konten dreamy premium.
+      </p>
+
+      <div class="mt-10 flex flex-col md:flex-row justify-center gap-5">
+        <a href="#gallery" class="px-8 py-4 rounded-full bg-[#B7C9B2] text-white font-bold shadow-xl hover:scale-105 duration-300">
+          🎨 Explore Gallery
+        </a>
+
+        <a href="https://lynk.id/zeacorner" target="_blank" class="px-8 py-4 rounded-full bg-white border border-pink-100 font-bold shadow-xl hover:scale-105 duration-300">
+          🛍 Visit Lynk.id
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold gradient-text">ZCC Gallery</h2>
+        <p class="mt-4 text-gray-500">Showcase karya aesthetic premium dari ZCC ✨</p>
+      </div>
+
+      <div class="columns-1 md:columns-3 gap-5 space-y-5">
+
+        <div class="gallery-card glass rounded-[30px] p-4 duration-300 shadow-xl break-inside-avoid">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" class="rounded-[25px] mb-4" />
+          <h3 class="text-2xl font-bold">StoryMaker Carousel</h3>
+          <p class="mt-2 text-sm text-gray-500">Cute carousel aesthetic content untuk branding & social media.</p>
+        </div>
+
+        <div class="gallery-card glass rounded-[30px] p-4 duration-300 shadow-xl break-inside-avoid">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" class="rounded-[25px] mb-4" />
+          <h3 class="text-2xl font-bold">Worksheet Kids</h3>
+          <p class="mt-2 text-sm text-gray-500">Worksheet lucu dan edukatif dengan visual dreamy premium.</p>
+        </div>
+
+        <div class="gallery-card glass rounded-[30px] p-4 duration-300 shadow-xl break-inside-avoid">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" class="rounded-[25px] mb-4" />
+          <h3 class="text-2xl font-bold">RecipeMaker</h3>
+          <p class="mt-2 text-sm text-gray-500">Food poster, recipe card, dan cafe aesthetic visual.</p>
+        </div>
+
+        <div class="gallery-card glass rounded-[30px] p-4 duration-300 shadow-xl break-inside-avoid">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" class="rounded-[25px] mb-4" />
+          <h3 class="text-2xl font-bold">Branding Content</h3>
+          <p class="mt-2 text-sm text-gray-500">Poster, cover, banner, dan visual branding aesthetic.</p>
+        </div>
+
+        <div class="gallery-card glass rounded-[30px] p-4 duration-300 shadow-xl break-inside-avoid">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" class="rounded-[25px] mb-4" />
+          <h3 class="text-2xl font-bold">Cute Chibi Visual</h3>
+          <p class="mt-2 text-sm text-gray-500">Kawaii cute illustration & dreamy AI art content.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- StoryMaker -->
+  <section id="storymaker" class="py-24 px-6 bg-white/60">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-5xl font-bold gradient-text">ZCC StoryMaker</h2>
+        <p class="mt-4 text-gray-500">Visual storytelling aesthetic untuk social media & branding.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-[30px] p-8 shadow-xl">
+          <div class="text-5xl mb-5">🎠</div>
+          <h3 class="text-2xl font-bold">Carousel Content</h3>
+          <p class="mt-3 text-gray-500">Slide aesthetic premium untuk TikTok & Instagram.</p>
+        </div>
+
+        <div class="glass rounded-[30px] p-8 shadow-xl">
+          <div class="text-5xl mb-5">📚</div>
+          <h3 class="text-2xl font-bold">Worksheet</h3>
+          <p class="mt-3 text-gray-500">Cute educational printable & visual learning content.</p>
+        </div>
+
+        <div class="glass rounded-[30px] p-8 shadow-xl">
+          <div class="text-5xl mb-5">✨</div>
+          <h3 class="text-2xl font-bold">AI Art & Comic</h3>
+          <p class="mt-3 text-gray-500">Dreamy comic & cute chibi visual aesthetic content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RecipeMaker -->
+  <section id="recipemaker" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-5xl font-bold gradient-text">ZCC RecipeMaker</h2>
+        <p class="mt-4 text-gray-500">Food branding & recipe visual aesthetic premium.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass rounded-[30px] p-8 shadow-xl">
+          <div class="text-5xl mb-5">🍰</div>
+          <h3 class="text-2xl font-bold">Recipe Card</h3>
+          <p class="mt-3 text-gray-500">Cute food recipe card dengan visual clean aesthetic.</p>
+        </div>
+
+        <div class="glass rounded-[30px] p-8 shadow-xl">
+          <div class="text-5xl mb-5">☕</div>
+          <h3 class="text-2xl font-bold">Cafe Branding</h3>
+          <p class="mt-3 text-gray-500">Food poster dan branding visual untuk cafe aesthetic.</p>
+        </div>
+
+        <div class="glass rounded-[30px] p-8 shadow-xl">
+          <div class="text-5xl mb-5">🍓</div>
+          <h3 class="text-2xl font-bold">Food Carousel</h3>
+          <p class="mt-3 text-gray-500">Carousel menu aesthetic untuk social media food brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6 bg-white/60">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-5xl font-bold gradient-text">About ZCC</h2>
+
+      <p class="mt-8 text-lg leading-relaxed text-gray-500">
+        ZCC (Zea Creative Corner) adalah creative AI aesthetic studio yang fokus membuat visual premium seperti StoryMaker, RecipeMaker, AI art, branding content, worksheet, dan konten dreamy aesthetic untuk creator modern.
+      </p>
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <section id="connect" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-5xl font-bold gradient-text">Connect With ZCC</h2>
+      <p class="mt-4 text-gray-500">Temukan semua link & komunitas ZCC ✨</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-14">
+
+        <a href="https://lynk.id/zeacorner" target="_blank" class="glass rounded-[30px] p-8 shadow-xl hover:scale-105 duration-300">
+          <div class="text-5xl mb-4">🛍</div>
+          <h3 class="text-2xl font-bold">Lynk.id</h3>
+          <p class="mt-2 text-gray-500">Produk & digital content ZCC.</p>
+        </a>
+
+        <a href="https://wa.me/62881080091195" target="_blank" class="glass rounded-[30px] p-8 shadow-xl hover:scale-105 duration-300">
+          <div class="text-5xl mb-4">💬</div>
+          <h3 class="text-2xl font-bold">WhatsApp</h3>
+          <p class="mt-2 text-gray-500">Hubungi ZCC langsung.</p>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCwHHsF6smwOI18rY0G" target="_blank" class="glass rounded-[30px] p-8 shadow-xl hover:scale-105 duration-300">
+          <div class="text-5xl mb-4">📢</div>
+          <h3 class="text-2xl font-bold">WA Channel</h3>
+          <p class="mt-2 text-gray-500">Update & komunitas ZCC.</p>
+        </a>
+
+        <a href="https://tiktok.com/@zeascreativecorner" target="_blank" class="glass rounded-[30px] p-8 shadow-xl hover:scale-105 duration-300">
+          <div class="text-5xl mb-4">🎵</div>
+          <h3 class="text-2xl font-bold">TikTok</h3>
+          <p class="mt-2 text-gray-500">Konten aesthetic & AI visual.</p>
+        </a>
+
+        <a href="https://www.instagram.com/zeacreativecorner" target="_blank" class="glass rounded-[30px] p-8 shadow-xl hover:scale-105 duration-300">
+          <div class="text-5xl mb-4">📸</div>
+          <h3 class="text-2xl font-bold">Instagram</h3>
+          <p class="mt-2 text-gray-500">Gallery & branding visual ZCC.</p>
+        </a>
+
+        <a href="https://www.threads.com/@zeacreativecorner" target="_blank" class="glass rounded-[30px] p-8 shadow-xl hover:scale-105 duration-300">
+          <div class="text-5xl mb-4">🌸</div>
+          <h3 class="text-2xl font-bold">Threads</h3>
+          <p class="mt-2 text-gray-500">Daily aesthetic & creator updates.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6 text-center border-t border-pink-100 bg-white/50">
+    <h3 class="text-2xl font-bold gradient-text">ZCC ✨</h3>
+    <p class="mt-3 text-gray-500">Creative AI Aesthetic Studio</p>
+    <p class="mt-2 text-sm text-gray-400">Where Art Meets Digital Magic ✨</p>
+  </footer>
+
+</body>
+</html>
